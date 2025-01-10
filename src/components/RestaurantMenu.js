@@ -18,6 +18,7 @@ const RestaurantMenu = () => {
   };
 
   const menu = useRestaurant(resId);
+  
   console.log(menu);
   
 
