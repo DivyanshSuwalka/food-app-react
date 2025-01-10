@@ -5,6 +5,7 @@ import Shimmer from "./Shimmer";
 import { IMG_CDN_URL } from "../constants";
 import { addItem } from "../utils/cartSlice";
 import { useDispatch } from "react-redux";
+import { log } from "console";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -17,6 +18,8 @@ const RestaurantMenu = () => {
   };
 
   const menu = useRestaurant(resId);
+  console.log(menu);
+  
 
   return menu?.length === 0 ? (
     <Shimmer />
