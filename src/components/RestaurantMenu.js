@@ -44,7 +44,7 @@ const RestaurantMenu = () => {
                   <p className="text-xl">{res?.card?.info?.name}</p>
                   <ul className="mt-2">
                     <li className="text-md">
-                      <p>Price: ₹{(res?.card?.info?.finalPrice)/100}</p>
+                      <p>Price: ₹{(res?.card?.info?.price)/100}</p>
                     </li>
                     <li className="text-md">
                       <p>Description: {res?.card?.info?.description}</p> 

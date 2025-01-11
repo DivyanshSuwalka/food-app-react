@@ -6,10 +6,9 @@ const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
   console.log(cartItems);
 
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const handleClearCart = () => {
-    dispatch(clearCart())
+    dispatch(clearCart());
   };
 
   return (
@@ -29,7 +28,7 @@ const Cart = () => {
         </div>
       </div>
       <div className="flex p-3 justify-around flex-col">
-        <div className="flex m-5 p-2 bg-zinc-100 rounded-md w-auto flex-wrap">
+        <div className="flex m-5 p-2 bg-zinc-100 rounded-md w-auto flex-wrap justify-around">
           {cartItems.map((cartItems) => (
             <FoodItem {...cartItems} key={cartItems.id} />
           ))}
