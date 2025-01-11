@@ -18,9 +18,8 @@ const RestaurantMenu = () => {
   };
 
   const menu = useRestaurant(resId);
-  
+
   console.log(menu);
-  
 
   return menu?.length === 0 ? (
     <Shimmer />
@@ -45,14 +44,17 @@ const RestaurantMenu = () => {
                   <p className="text-xl">{res?.card?.info?.name}</p>
                   <ul className="mt-2">
                     <li className="text-md">
-                      <p>Description:</p> {res?.card?.info?.description}
+                      <p>Price: ₹{(res?.card?.info?.finalPrice)/100}</p>
                     </li>
-                    <li className="text-md mt-2">
-                      <p>Category:</p> {res?.card?.info?.category}
+                    <li className="text-md">
+                      <p>Description: {res?.card?.info?.description}</p> 
                     </li>
+                    {/* <li className="text-md mt-2">
+                      <p>Category: {res?.card?.info?.category}</p> 
+                    </li> */}
                   </ul>
                 </div>
-                
+
                 <button
                   className="bg-zinc-300 hover:bg-zinc-400 p-2 rounded-md font-light"
                   onClick={() => addFoodItem(res?.card?.info)}
